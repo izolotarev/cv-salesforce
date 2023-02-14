@@ -1,0 +1,93 @@
+.projects {
+  padding: 20px 0 20px 0;
+}
+
+.projects__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.projects__heading {
+  margin-left: 340px;
+  margin-bottom: 20px;
+
+  @media (max-width: 876px) {
+    margin-left: 0;
+  }
+}
+
+.projects__list-item {
+  flex-basis: 50%;
+  flex-grow: 1;
+  margin-bottom: 20px;
+
+  @media (max-width: 876px) {
+    flex-basis: 70%;
+    flex-grow: 0;
+  }
+}
+
+.projects__list {
+  list-style: none;
+
+  @media (max-width: 660px) {
+    display: block;
+  }
+}
+
+.projects__list-item:nth-child(2) {
+  margin-bottom: 30px;
+}
+
+.projects__photo {
+  width: 100%;
+}
+
+.projects__date {
+  margin-top: 10px;
+  color: $color-dark-grey;
+
+  width: 340px;
+
+  @media (max-width: 876px) {
+    width: auto;
+    flex-basis: 26.786%;
+  }
+}
+
+.projects__title {
+  margin-bottom: 10px;
+}
+
+.projects__description {
+  margin-bottom: 10px;
+}
+
+.projects__tech {
+  margin-bottom: 10px;
+}
+
+.projects__list-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 10px;
+
+  &:hover {
+    color: $color-blue;
+    @extend %transition;
+
+    & svg {
+      fill: $color-blue;
+      @extend %transition;
+    }
+  }
+}
+
+.projects__repo-desc {
+  margin-left: 10px;
+}
+
+

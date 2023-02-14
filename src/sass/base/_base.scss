@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  @extend %font-prim;
+  @include font($size: 2rem, $height: 2.4rem, $weight: 500);
+
+  @include media-tablet {
+    @include font($size: 1.8rem, $height: 2.2rem, $weight: 500);
+  }
+
+  @include media-mobile {
+    @include font($size: 1.5rem, $height: 2rem, $weight: 500);
+  }
+
+  box-sizing: border-box;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
